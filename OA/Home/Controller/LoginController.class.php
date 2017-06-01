@@ -10,9 +10,7 @@ class LoginController extends Controller
 		$act=$_GET['act'];
 		if($act=="exit")
 		{
-			    session("UNAME",null);
-			    session("UID",null);
-			    session("ROLE",null);
+			    session(null);
 			    $this->success("退出成功",U("Home/Login/login_list"));
 			    exit();
 		}
